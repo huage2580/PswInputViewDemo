@@ -78,7 +78,7 @@ public class PswInputView extends View {
         mDotPaint.setStyle(Paint.Style.FILL);
         mDotPaint.setColor(mDotColor);
         mRoundRect=new RectF();
-        mRoundRadius=(int)(10*dp);
+        mRoundRadius=(int)(5*dp);
         this.setOnKeyListener(new MyKeyListener());
     }
 
@@ -159,7 +159,7 @@ public class PswInputView extends View {
         final int height=getHeight()-2;
         //先画个圆角矩形
         mRoundRect.set(0,0,width,height);
-        canvas.drawRoundRect(mRoundRect,5,5,mBorderPaint);
+        canvas.drawRoundRect(mRoundRect,mRoundRadius,mRoundRadius,mBorderPaint);
         //画分割线
         for (int i=1;i<count;i++){
             final int x=i*size;
