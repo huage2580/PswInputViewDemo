@@ -165,7 +165,8 @@ public class PswInputView extends View {
             final int x=i*size;
             canvas.drawLine(x,0,x,height,mBorderPaint);
         }
-        //画掩盖点
+        //画掩盖点,
+        // 这是前面定义的变量 private ArrayList<Integer> result;//输入结果保存
         int dotRadius=size/6;//圆圈占格子的三分之一
         for (int i=0;i<result.size();i++){
             final float x= (float) (size*(i+0.5));
