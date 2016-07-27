@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PswInputViewDemo.iml" filepath="$PROJECT_DIR$/PswInputViewDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pswinputview/pswinputview.iml" filepath="$PROJECT_DIR$/pswinputview/pswinputview.iml" />
     </modules>
   </component>
 </project>
