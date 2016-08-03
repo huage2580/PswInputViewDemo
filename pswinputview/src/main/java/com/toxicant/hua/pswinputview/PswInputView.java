@@ -235,7 +235,7 @@ public class PswInputView extends View {
         @Override
         public boolean commitText(CharSequence text, int newCursorPosition) {
            //这里是接受输入法的文本的，我们只处理数字，所以什么操作都不做
-            return true;
+            return super.commitText(text,newCursorPosition);
         }
 
         @Override
@@ -255,6 +255,9 @@ public class PswInputView extends View {
         @Override
         public boolean onKey(View v, int keyCode, KeyEvent event) {
             if (event.getAction()==KeyEvent.ACTION_DOWN){
+                if (event.isShiftPressed()){//处理*#等键
+                    return false;
+                }
                 if (keyCode>= KeyEvent.KEYCODE_0 && keyCode<= KeyEvent.KEYCODE_9){//只处理数字
                     if (result.size()<count){
                         result.add(keyCode-7);
